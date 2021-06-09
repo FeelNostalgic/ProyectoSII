@@ -1,17 +1,15 @@
-jpa.grupo
-relacion grupo-titulacion
+Cambios en las JPA respecto a la entrega anterior
+Se han revisado todas las relaciones entre las entidades JPA arreglando los errores de las anteriores entregas
 
-jpa.titulacion
-relacion titulacion-asignatura
+Cambios en los EJB respecto a la entrega anterior
+ejb.grupo
+asignarGrupo método completado
+se ha añadido obtenerListaGrupos para su utilización en los backing beans
+se ha añadido obtenerTitulacion para su utilización en los backing beans
 
-jpa.matricula
-artibuto listado_asignaturas
-relacion asignturas_matricula-matricula
+ejb.testGrupo
+testAsignarGrupo completado
 
-ejb.matricula
-método obtenerAsignaturaMatricula
-ejb.asignatura
-metodo obtenerAsignaturaMatricula
 
-ejb.test.testMatricula
-actualizar de asignatura a asignaturas_matricula
+
+
