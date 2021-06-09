@@ -17,7 +17,7 @@ import org.junit.runners.MethodSorters;
 import es.uma.informatica.sii.anotaciones.Requisitos;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MatriculaTest {
+public class MatriculaTestIT {
 	private WebDriver driver;
 	private Map<String, Object> vars;
 	JavascriptExecutor js;
