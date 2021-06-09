@@ -46,7 +46,7 @@ public class GrupoTestIT {
   }
   @Requisitos({"RF-008"})
   @Test
-  public void t1_Creargrupo() {
+  public void t2_Creargrupo() {
 	    driver.get("http://0.0.0.0:8080/ProyectoSII-war/faces/grupos.xhtml");
 	    driver.manage().window().setSize(new Dimension(907, 759));
 	    driver.findElement(By.id("grupos:insertar")).click();
@@ -66,16 +66,17 @@ public class GrupoTestIT {
 	    assertThat(driver.findElement(By.id("grupos:j_idt20:3:curso")).getText(), is("Tercero"));
 	  }
   
-//  @Test
-//  public void BBDD() {
-//    driver.get("http://local:8080/ProyectoSII-war/faces/index.xhtml");
-//    driver.manage().window().setSize(new Dimension(908, 760));
-//    driver.findElement(By.linkText("BBDD")).click();
-//    assertThat(driver.findElement(By.id("grupos:j_idt20:0:titulacion_nombre")).getText(), is("Ingenieria Informática"));
-//  }
+  @Test
+  public void t1_BBDD() {
+    driver.get("http://local:8080/ProyectoSII-war/faces/index.xhtml");
+    driver.manage().window().setSize(new Dimension(908, 760));
+    driver.findElement(By.id("j_idt21:BBDD")).click();
+    assertThat(driver.findElement(By.id("grupos:j_idt24:0:titulacion_nombre")).getText(), is("Ingenieria Informática"));
+  }
+  
   @Requisitos({"RF-008"})
   @Test
-  public void t3_Actualizargrupo() {
+  public void t4_Actualizargrupo() {
     driver.get("http://0.0.0.0:8080/ProyectoSII-war/faces/grupos.xhtml");
     driver.manage().window().setSize(new Dimension(908, 760));
     driver.findElement(By.id("grupos:j_idt24:0:actualizar")).click();
@@ -102,7 +103,7 @@ public class GrupoTestIT {
   
   @Requisitos({"RF-008"})
   @Test
-  public void t2_Eliminargrupo() {
+  public void t3_Eliminargrupo() {
     driver.get("http://0.0.0.0:8080/ProyectoSII-war/faces/grupos.xhtml");
     driver.manage().window().setSize(new Dimension(908, 760));
     driver.findElement(By.id("grupos:j_idt24:2:eliminar")).click();
